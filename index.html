@@ -1,285 +1,297 @@
+<!DOCTYPE html>
 <html lang="en">
-    <style>
-        p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 
-p {
-    font-size: 10px;
-    line-height: 10px;
-    background: url('https://cdn.discordapp.com/attachments/872286611176570922/1181029292847681666/IMG_20231204_082830.jpg?ex=657f923d&is=656d1d3d&hm=0bf74444afc7b7d0dff852b6e1e1b4a844004d6007dfc1b0de1cc8996b5432e9&') no-repeat;
-    background-position: center;
-    -webkit-background-clip: text;
-    background-size: contain;
-    background-attachment: fixed;
-    -webkit-text-fill-color: rgba(255,255,255,0);
-}
-
-body {
-  overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    margin: 0px;
-    background-color: #262626;
-}
-    </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <title> Alyssa Pineda </title>
+    <title>Alyssa Pineda</title>
+    <style>
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
 
+        .text-effect {
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: bold;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 1s ease-in-out;
+            filter: grayscale(100%) contrast(120%) brightness(1.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            word-wrap: break-word;
+            opacity: 0.5;
+        }
+
+        .center-text {
+            position: relative;
+            z-index: 10;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            text-align: center;
+            color: white;
+            padding: 20px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+            max-width: 400px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .center-text:hover {
+            background: rgba(255, 255, 255);
+            transform: translateY(-2px);
+        }
+
+        .fade-transition {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        body {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0px;
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slide-controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .slide-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slide-dot.active {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.2);
+        }
+
+        .slide-info {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <p>
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
 
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-         Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-        Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord. I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.
-    </p>
+<body>
+    <div class="container">
+        <p class="text-effect" id="textEffect">
+            <!-- Background text will be generated by JavaScript -->
+        </p>
+        <div class="center-text" id="centerText">
+            <!-- Main text will be displayed here -->
+        </div>
+    </div>
+
+    <div class="slide-controls" id="slideControls">
+        <!-- Dots will be generated by JavaScript -->
+    </div>
+
+    <div class="slide-info" id="slideInfo">
+        Slide 1 of 8
+    </div>
+
+    <script>
+
+        // Configuration - adjust this number to change how many times the text repeats
+        const repeatCount = 200;
+
+
+
+        const textMessages = [
+            "Happy Birthday sa iyo Alyssa, sana madami pang dumating na ka-arawan sa buhay mo. Mabuhay ka hanggat gusto mo. Pag may problema ka, andito lng ako at si Lord.",
+            "I'm glad na nabuhay ka sa mundo at nakilala kita, sana makabawi ako sa mga nagawa mo sakin. My world is better with you in it. Happy Birthday ulit. Godbless.",
+            "Salamat sa lahat ng memories na ginawa natin together. You're such an amazing person and I'm blessed to know you. Happy Birthday Alyssa!",
+            "May this new year of your life bring you endless happiness, success, and all the dreams you've been wishing for. Happy Birthday beautiful!",
+            "Alyssa, you deserve all the love and happiness in the world. Thank you for being such a wonderful friend. Happy Birthday!",
+            "Wishing you a year filled with laughter, love, and all your favorite things. You're truly special Alyssa. Happy Birthday!",
+            "May your birthday be as bright and beautiful as your smile. You bring so much joy to everyone around you. Happy Birthday!",
+            "Here's to another year of adventures, growth, and making beautiful memories together. Happy Birthday Alyssa, stay amazing!"
+        ];
+        const images = [
+            'https://pbs.twimg.com/media/FjtBnTNUYAI01Zn?format=jpg&name=large',
+            'https://pbs.twimg.com/media/FZCaw7OUYAADz8F?format=jpg&name=large',
+            'https://pbs.twimg.com/media/FstAJ0AacAA_hYM?format=jpg&name=large',
+            'https://pbs.twimg.com/media/GbYjmXEaMAA_NcG?format=jpg&name=large',
+            'https://media.discordapp.net/attachments/944663759438352394/1445838677413728398/Screenshot_20251204_020506_com_instagram_lite_MainActivity.jpg?ex=6931cdb3&is=69307c33&hm=9c3ffcb86ed0a222fe27ed79fa388f7043c76f4bbccc0b714d9a59261e4af1a0&=&format=webp&width=382&height=855',
+            'https://media.discordapp.net/attachments/944663759438352394/1445838666994946138/Screenshot_20251204_020533_com_instagram_lite_MainActivity.jpg?ex=6931cdb0&is=69307c30&hm=0462f1d6a49887208b7a0db76b47b5148af7009ccbf86c93181edfd8d8ed54e5&=&format=webp&width=382&height=855',
+
+
+        ];
+
+        // Generate repeated text for specific image
+        function generateRepeatedText(imageIndex) {
+            const textToRepeat = textMessages[imageIndex] || textMessages[0];
+            const textArray = [];
+            for (let i = 0; i < repeatCount; i++) {
+                textArray.push(textToRepeat);
+            }
+            return textArray.join(' ');
+        }
+
+        let currentSlide = 0;
+        let isPlaying = true;
+        const textEffect = document.getElementById('textEffect');
+        const centerText = document.getElementById('centerText');
+        const slideControls = document.getElementById('slideControls');
+        const slideInfo = document.getElementById('slideInfo');
+
+        // Create slide control dots
+        function createSlideControls() {
+            images.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'slide-dot';
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                slideControls.appendChild(dot);
+            });
+        }
+
+        // Update slide with fade transition
+        function updateSlide(index) {
+            // Add fade out effect
+            textEffect.classList.add('fade-transition');
+            centerText.classList.add('fade-transition');
+
+            setTimeout(() => {
+                // Change background image
+                textEffect.style.backgroundImage = `url('${images[index]}')`;
+
+                // Update background text content for this specific image
+                textEffect.innerHTML = generateRepeatedText(index);
+
+                // Update center text content
+                centerText.innerHTML = textMessages[index] || textMessages[0];
+
+                // Update slide info
+                slideInfo.textContent = `Slide ${index + 1} of ${images.length}`;
+
+                // Update active dot
+                document.querySelectorAll('.slide-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+
+                // Remove fade out effect
+                textEffect.classList.remove('fade-transition');
+                centerText.classList.remove('fade-transition');
+            }, 500);
+        }
+
+        // Go to specific slide
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide(currentSlide);
+        }
+
+        // Next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % images.length;
+            updateSlide(currentSlide);
+        }
+
+        // Auto-advance slides
+        function startSlideshow() {
+            setInterval(() => {
+                if (isPlaying) {
+                    nextSlide();
+                }
+            }, 8000); // Change slide every 8 seconds
+        }
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            switch (e.key) {
+                case 'ArrowRight':
+                case ' ':
+                    nextSlide();
+                    break;
+                case 'ArrowLeft':
+                    currentSlide = currentSlide === 0 ? images.length - 1 : currentSlide - 1;
+                    updateSlide(currentSlide);
+                    break;
+                case 'p':
+                case 'P':
+                    isPlaying = !isPlaying;
+                    break;
+            }
+        });
+
+        // Click to pause/play
+        centerText.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+        });
+
+        // Initialize
+        createSlideControls();
+
+        // Set the initial text for first image
+        textEffect.innerHTML = generateRepeatedText(0);
+        centerText.innerHTML = textMessages[0];
+
+        updateSlide(0);
+        startSlideshow();
+    </script>
 </body>
+
 </html>
